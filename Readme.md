@@ -11,4 +11,4 @@ Forecasting the development of new infections and deaths tolls due to the Covid 
 ## Method 
 1. Moving Average/ Exponential Smoothing 
 2. Kalman Filter 
-
+3. ..
