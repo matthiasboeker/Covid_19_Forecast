@@ -1,6 +1,6 @@
 
 # Covid 19 Forecast 
-Forecasting the development of new infections and deaths tolls due to the Covid 19 virus. 
+Forecasting the development of new infections and death tolls due to the Covid 19 virus. 
 
 ## Process
 1. Implementation of a naive forecast
