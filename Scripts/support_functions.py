@@ -34,7 +34,8 @@ def cut_down(data):
     dat['Long'] = dat['Long'].astype(float)
     dat['Lat'] = dat['Lat'].astype(str)
     dat['Lat'] = dat['Lat'].astype(float)
-    
+    dat['Date'] = dat['Date'].astype(str)
+    dat['Date'] = dat['Date'].astype('datetime64[ns]')
     dat['Infected'] = dat['Infected'].astype(str)
     dat['Infected'] = dat['Infected'].astype(int)
     dat['Deaths'] = data[1].iloc[:,-1].astype(str)
@@ -43,3 +44,19 @@ def cut_down(data):
     dat['Recovered'] = dat['Recovered'].astype(int) 
           
     return dat
+
+def cosine_sim(vec_a,vec_b):
+    
+    
+    cp = sum(vec_a[:].T*vec_b[:].T)
+    sum_a = np.sum(vec_a**2)
+    sum_b = np.sum(vec_b**2)
+    
+    cos_sim = cp/(np.square(sum_a)*np.square(sum_b))
+    
+    if cos_sim.shape != (1,):
+        print('Wrong Dimensions of input vectors, please transform with .T')
+    else:
+        
+        return cos_sim
+

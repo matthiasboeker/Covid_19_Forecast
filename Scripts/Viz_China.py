@@ -50,3 +50,4 @@ for state in far_states:
     CH.loc[CH['Province/State']==state,'Infected'].diff().rolling(window=2).mean().iloc[2:].transform(lambda x: x*(100/x.max())).plot()
 ax.legend(far_states)
 
+
