@@ -1,6 +1,6 @@
 
-# Covid 19 Forecast 
-Forecasting the development of new infections and death tolls due to the Covid 19 virus. 
+# Covid 19 Forecast
+Forecasting the development of new infections and death tolls due to the Covid 19 virus.
 
 ## Process
 1. Implementation of a naive forecast
@@ -8,7 +8,10 @@ Forecasting the development of new infections and death tolls due to the Covid 1
 3. Extension of the forcast with data of similary countries
 4. Extension of the forecast with data regarding goverment measures and flight traffic ...
 
-## Method 
-1. Moving Average/ Exponential Smoothing 
-2. Kalman Filter 
-3. ..
+## Method
+1. Moving Average/ Exponential Smoothing
+2. Kalman Filter
+3.
+
+## Papers
+https://papers.nips.cc/paper/2516-dynamical-modeling-with-kernels-for-nonlinear-time-series-prediction.pdf
