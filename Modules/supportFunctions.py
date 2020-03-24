@@ -36,18 +36,14 @@ def cut_down(data):
     dat.loc[:,'Infected'] = dat.loc[:,'Infected'].astype(str)
     dat.loc[:,'Deaths'] = data[1].iloc[:,-1].astype(str)
     dat.loc[:,'Recovered'] = data[2].iloc[:,-1].astype(str)
-    
     dat.loc[:,'Long'] = dat.loc[:,'Long'].astype(float)
     dat.loc[:,'Lat'] = dat.loc[:,'Lat'].astype(float)
-    
     data[0].loc[(data[0].loc[:,'Infected']==''),'Infected'] = np.nan
     data[1].loc[(data[1].loc[:,'Deaths']==''),'Deaths'] = np.nan
     data[2].loc[(data[2].loc[:,'Recovered']==''),'Recovered'] = np.nan
-    
     dat.loc[:,'Infected'] = dat.loc[:,'Infected'].astype(float)
     dat.loc[:,'Deaths'] = dat.loc[:,'Deaths'].astype(float)
     dat.loc[:,'Recovered'] = dat.loc[:,'Recovered'].astype(float) 
-          
     return dat
 
 
