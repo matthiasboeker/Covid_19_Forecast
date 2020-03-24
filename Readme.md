@@ -16,3 +16,4 @@ Forecasting the development of new infections due to the Covid 19 virus.
 3. https://www.sciencedirect.com/science/article/pii/S2468042720300051
 4. https://www.mdpi.com/2077-0383/9/2/523/htm
 5. https://papers.nips.cc/paper/2516-dynamical-modeling-with-kernels-for-nonlinear-time-series-prediction.pdf
+6. https://arxiv.org/pdf/2003.05681.pdf
