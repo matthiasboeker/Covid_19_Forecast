@@ -29,19 +29,25 @@ def cut_down(data):
     dat = dat.iloc[:-1,:]
     
     #Specifiy only Country/ Regions
-    dat.loc[dat['Province/State']=='','Province/State'] = dat.loc[dat['Province/State']=='','Country/Region']
-    dat['Long'] = dat['Long'].astype(str)
-    dat['Long'] = dat['Long'].astype(float)
-    dat['Lat'] = dat['Lat'].astype(str)
-    dat['Lat'] = dat['Lat'].astype(float)
-    dat['Date'] = dat['Date'].astype(str)
-    dat['Date'] = dat['Date'].astype('datetime64[ns]')
-    dat['Infected'] = dat['Infected'].astype(str)
-    dat['Infected'] = dat['Infected'].astype(int)
-    dat['Deaths'] = data[1].iloc[:,-1].astype(str)
-    dat['Deaths'] = dat['Deaths'].astype(int)
-    dat['Recovered'] = data[2].iloc[:,-1].astype(str) 
-    dat['Recovered'] = dat['Recovered'].astype(int) 
+    dat.loc[dat.loc[:,'Province/State']=='','Province/State'] = dat.loc[dat.loc[:,'Province/State']=='','Country/Region']
+    dat.loc[:,'Long'] = dat.loc[:,'Long'].astype(str)
+    dat.loc[:,'Lat'] = dat.loc[:,'Lat'].astype(str)
+    dat.loc[:,'Date'] = dat.loc[:,'Date'].astype(str)
+    dat.loc[:,'Date'] = dat.loc[:,'Date'].astype('datetime64[ns]')
+    dat.loc[:,'Infected'] = dat.loc[:,'Infected'].astype(str)
+    dat.loc[:,'Deaths'] = data[1].iloc[:,-1].astype(str)
+    dat.loc[:,'Recovered'] = data[2].iloc[:,-1].astype(str)
+    
+    dat.loc[:,'Long'] = dat.loc[:,'Long'].astype(float)
+    dat.loc[:,'Lat'] = dat.loc[:,'Lat'].astype(float)
+    
+    data[0].loc[(data[0].loc[:,'Infected']==''),'Infected'] = np.nan
+    data[1].loc[(data[1].loc[:,'Deaths']==''),'Deaths'] = np.nan
+    data[2].loc[(data[2].loc[:,'Recovered']==''),'Recovered'] = np.nan
+    
+    dat.loc[:,'Infected'] = dat.loc[:,'Infected'].astype(float)
+    dat.loc[:,'Deaths'] = dat.loc[:,'Deaths'].astype(float)
+    dat.loc[:,'Recovered'] = dat.loc[:,'Recovered'].astype(float) 
           
     return dat
 
