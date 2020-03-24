@@ -22,6 +22,7 @@ def country_filter(dat, Country='Germany' ,Region='Germany'):
 
     
 def cut_down(data):
+    import numpy as np
     #Processing of the data 
     dat = data[0]
     #Delete last row 
