@@ -14,4 +14,8 @@ Forecasting the development of new infections and death tolls due to the Covid 1
 3.
 
 ## Papers
+https://arxiv.org/pdf/2002.07112.pdf
+https://arxiv.org/pdf/2002.05866.pdf
 https://papers.nips.cc/paper/2516-dynamical-modeling-with-kernels-for-nonlinear-time-series-prediction.pdf
+https://www.sciencedirect.com/science/article/pii/S2468042720300051
+https://www.mdpi.com/2077-0383/9/2/523/htm
