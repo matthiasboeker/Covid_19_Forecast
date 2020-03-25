@@ -14,7 +14,7 @@ def get_region_list():
 #Infected: 0
 #Deaths: 1
 #Recovered: 2
-def country_filter(Country='Germany' ,Region='Germany'):
+def country_filter(dat, Country='Germany' ,Region='Germany'):
     out = dat.loc[dat['Province/State']==Region,:]
     out = dat.loc[dat['Country/Region']==Country,:]
     out.index = out['Date']
