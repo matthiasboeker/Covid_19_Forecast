@@ -21,3 +21,4 @@ Forecasting the development of new infections due to the Covid 19 virus.
 ## Feature Data 
 * http://data.stats.gov.cn/english/easyquery.htm?cn=E0103
 * https://www.worldweatheronline.com/developer/api/docs/
+* https://www.worldweatheronline.com/developer/api/
