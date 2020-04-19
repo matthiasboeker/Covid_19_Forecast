@@ -14,11 +14,18 @@ def get_region_list():
 #Infected: 0
 #Deaths: 1
 #Recovered: 2
-def country_filter(dat, Country='Germany' ,Region='Germany'):
-    out = dat.loc[dat['Province/State']==Region,:]
-    out = dat.loc[dat['Country/Region']==Country,:]
-    out.index = out['Date']
-    out = out.sort_index(ascending=True)
+def country_filter(dat, Country='Germany' ,Region = ''):
+    
+    if Region == '':
+        out = dat.loc[dat['Country/Region']==Country,:]
+        out.index = out['Date']
+        out = out.sort_index(ascending=True)
+    else:
+        out = dat.loc[dat['Country/Region']==Country,:]
+        out = out.loc[dat['Province/State']==Region,:]
+        out.index = out['Date']
+        out = out.sort_index(ascending=True)       
+        
     return out 
 
 def cut_down(data):
@@ -44,6 +51,19 @@ def cut_down(data):
     dat.loc[:,'Deaths'] = dat.loc[:,'Deaths'].astype(float)
     return dat  
 
+def find_timepoint_zero(df):
+    df["Timepoint"] = -1
+
+    point_zero = df.loc[df['Infected']>0, "Date"][0]
+    df.loc[df['Date'] == point_zero, "Timepoint"] = 0
+
+    previous = -1
+    for i, row in df.iterrows():
+        if i == point_zero or previous != -1:
+            previous = previous + 1
+            df.at[i,'Timepoint'] = previous
+            
+    return df
 
 def cosine_sim(vec_a,vec_b):
     
