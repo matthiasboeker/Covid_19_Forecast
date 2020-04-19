@@ -1,10 +1,11 @@
 
 # Covid 19 Forecast
 Forecasting the development of new infections due to the Covid 19 virus.
+Running notebook can be found under Notebooks/ARIMA_Approach
 
 ## Process
 1. Implementation of a ARIMA forecast
-2. Kalman Filter updated with ARIMA forecast 
+2. Kalman Filter updated with ARIMA forecast
 
 ## Papers
 1. https://arxiv.org/pdf/2002.07112.pdf
